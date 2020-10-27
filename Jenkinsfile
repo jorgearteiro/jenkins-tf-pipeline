@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'git remot -v'
+                sh 'git remot -v' 
             }
         }
     }
