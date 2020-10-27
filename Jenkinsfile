@@ -5,7 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'git remote -v' 
+                sh 'echo "test " > lz.tf' 
+                sh 'git add .'
+                sh 'git commit -a -m "I have added some changes"'
+                sh 'git push -u origin new-tf-pr'
             }
         }
     }
